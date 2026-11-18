@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Image Gallery</title>
+<style>
+<* General Styling </
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
+background-color: #f2f2f2;
+}
+<* Container </
+.container {
+max-width: 1200px;
+margin: auto;
+}
+<* Heading </
+h1 {
+text-align: center;
+color: #333;
+margin-bottom: 25px;
+}
+<* Gallery - Desktop (3 Columns) </
+.gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+}
+<* Image Styling </
+.gallery img {
+width: 100%;
+aspect-ratio: 4 / 3;
+object-fit: cover;
+border-radius: 10px;
+}
+<* Tablet - 2 Columns </
+@media (max-width: 991px) {
+.gallery {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+<* Mobile - 1 Column </
+@media (max-width: 575px) {
+.gallery {
+grid-template-columns: 1fr;
+gap: 10px;
+}
+h1 {
+}
+}
+font-size: 22px;
+<* Hover Effect </
+@media (hover: hover) {
+.gallery img:hover {
+transform: scale(1.03);
+transition: 0.3s;
+
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>My Image Gallery</h1>
+<div class="gallery">
+<img src="img1.jpg" alt="Image 1">
+<img src="img2.jpg" alt="Image 2">
+<img src="img3.jpg" alt="Image 3">
+<img src="img4.jpg" alt="Image 4">
+<img src="img5.jpg" alt="Image 5">
+<img src="img6.jpg" alt="Image 6">
+<img src="img7.jpg" alt="Image 7">
+<img src="img8.jpg" alt="Image 8">
+</div>
+</div>
+</body>
+</html
